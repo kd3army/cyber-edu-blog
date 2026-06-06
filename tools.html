@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hacking tools directory with descriptions and step-by-step usage tutorials for ethical security learning.">
+  <title>Security Tools — GreenShield Academy</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="index.html" class="navbar__brand">
+        <span class="navbar__logo" aria-hidden="true">◈</span>
+        GreenShield Academy
+      </a>
+      <button class="navbar__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
+      <ul class="navbar__menu" id="nav-menu">
+        <li><a href="index.html" class="navbar__link">Home</a></li>
+        <li><a href="tools.html" class="navbar__link navbar__link--active">Tools</a></li>
+        <li><a href="index.html#topics" class="navbar__link">Topics</a></li>
+        <li><a href="index.html#about" class="navbar__link">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="page-hero__title">Security Tools Directory</h1>
+        <p class="page-hero__subtitle">
+          Explore ethical hacking and defensive tools with descriptions, use cases, and hands-on tutorials.
+        </p>
+      </div>
+    </section>
+
+    <section class="section tools-section">
+      <div class="container">
+        <div class="tools-toolbar">
+          <div class="search-box">
+            <label for="tool-search" class="visually-hidden">Search tools</label>
+            <input
+              type="search"
+              id="tool-search"
+              class="search-box__input"
+              placeholder="Search by name or keyword…"
+              autocomplete="off"
+            >
+          </div>
+          <div class="filter-group" role="group" aria-label="Filter by category">
+            <button type="button" class="filter-btn filter-btn--active" data-filter="all">All</button>
+            <button type="button" class="filter-btn" data-filter="recon">Recon</button>
+            <button type="button" class="filter-btn" data-filter="network">Network</button>
+            <button type="button" class="filter-btn" data-filter="web">Web</button>
+            <button type="button" class="filter-btn" data-filter="exploit">Exploit</button>
+          </div>
+        </div>
+
+        <p class="tools-count" id="tools-count" aria-live="polite"></p>
+
+        <div class="tools-grid" id="tools-grid">
+          <!-- Tool cards rendered by tools.js -->
+        </div>
+
+        <p class="tools-empty" id="tools-empty" hidden>No tools match your search. Try a different keyword or category.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__brand">GreenShield Academy</p>
+      <p class="site-footer__copy">&copy; 2026 GreenShield Academy. For educational purposes only.</p>
+      <nav class="site-footer__nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="tools.html">Tools</a>
+        <a href="index.html#about">About</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/tools.js"></script>
+</body>
+</html>

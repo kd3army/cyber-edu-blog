@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn ethical hacking, cybersecurity fundamentals, and defensive security through practical tutorials.">
+  <title>GreenShield Academy — Cybersecurity Education</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a href="index.html" class="navbar__brand">
+        <span class="navbar__logo" aria-hidden="true">◈</span>
+        GreenShield Academy
+      </a>
+      <button class="navbar__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
+      <ul class="navbar__menu" id="nav-menu">
+        <li><a href="index.html" class="navbar__link navbar__link--active">Home</a></li>
+        <li><a href="tools.html" class="navbar__link">Tools</a></li>
+        <li><a href="#topics" class="navbar__link">Topics</a></li>
+        <li><a href="#about" class="navbar__link">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <p class="hero__eyebrow">Ethical Hacking &amp; Defensive Security</p>
+        <h1 class="hero__title">Learn cybersecurity the right way</h1>
+        <p class="hero__subtitle">
+          Practical guides, tool walkthroughs, and hands-on labs for aspiring security professionals.
+          Built for learning — always use skills responsibly and legally.
+        </p>
+        <div class="hero__actions">
+          <a href="tools.html" class="btn btn--primary">Explore Tools</a>
+          <a href="#topics" class="btn btn--secondary">Browse Topics</a>
+        </div>
+        <div class="hero__stats">
+          <div class="stat">
+            <span class="stat__value">24+</span>
+            <span class="stat__label">Tool Guides</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value">8</span>
+            <span class="stat__label">Learning Paths</span>
+          </div>
+          <div class="stat">
+            <span class="stat__value">100%</span>
+            <span class="stat__label">Ethical Focus</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="topics">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">Core Topics</h2>
+          <p class="section__desc">Structured learning areas to build a solid security foundation.</p>
+        </header>
+        <div class="card-grid">
+          <article class="topic-card">
+            <div class="topic-card__icon" aria-hidden="true">🛡️</div>
+            <h3 class="topic-card__title">Network Security</h3>
+            <p class="topic-card__text">Scanning, enumeration, firewall rules, and traffic analysis fundamentals.</p>
+          </article>
+          <article class="topic-card">
+            <div class="topic-card__icon" aria-hidden="true">🔐</div>
+            <h3 class="topic-card__title">Cryptography</h3>
+            <p class="topic-card__text">Hashing, encryption, certificates, and common cryptographic pitfalls.</p>
+          </article>
+          <article class="topic-card">
+            <div class="topic-card__icon" aria-hidden="true">🌐</div>
+            <h3 class="topic-card__title">Web Application Security</h3>
+            <p class="topic-card__text">OWASP Top 10, injection flaws, authentication, and secure coding basics.</p>
+          </article>
+          <article class="topic-card">
+            <div class="topic-card__icon" aria-hidden="true">💻</div>
+            <h3 class="topic-card__title">Linux &amp; CLI</h3>
+            <p class="topic-card__text">Command-line workflows, scripting, and hardening Linux environments.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <header class="section__header">
+          <h2 class="section__title">Featured Tool Guides</h2>
+          <p class="section__desc">Step-by-step tutorials for industry-standard security tools.</p>
+        </header>
+        <div class="featured-tools">
+          <article class="featured-tool">
+            <span class="badge badge--beginner">Beginner</span>
+            <h3 class="featured-tool__title">Nmap</h3>
+            <p class="featured-tool__text">Network discovery and port scanning for reconnaissance phases.</p>
+            <a href="tools.html#nmap" class="featured-tool__link">View tutorial →</a>
+          </article>
+          <article class="featured-tool">
+            <span class="badge badge--intermediate">Intermediate</span>
+            <h3 class="featured-tool__title">Wireshark</h3>
+            <p class="featured-tool__text">Capture and analyze network packets to diagnose security issues.</p>
+            <a href="tools.html#wireshark" class="featured-tool__link">View tutorial →</a>
+          </article>
+          <article class="featured-tool">
+            <span class="badge badge--advanced">Advanced</span>
+            <h3 class="featured-tool__title">Metasploit</h3>
+            <p class="featured-tool__text">Penetration testing framework for exploit development and validation.</p>
+            <a href="tools.html#metasploit" class="featured-tool__link">View tutorial →</a>
+          </article>
+        </div>
+        <div class="section__cta">
+          <a href="tools.html" class="btn btn--primary">View All Tools</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about">
+        <div class="about__content">
+          <h2 class="section__title">About GreenShield Academy</h2>
+          <p>
+            GreenShield Academy is an educational blog dedicated to ethical hacking and cybersecurity.
+            Every guide emphasizes legal, authorized testing — in labs, CTFs, and environments you own or have permission to assess.
+          </p>
+          <p>
+            Our mission is to make security knowledge accessible through clear explanations, reproducible examples,
+            and responsible use guidelines.
+          </p>
+        </div>
+        <aside class="about__notice" role="note">
+          <h3 class="about__notice-title">⚠️ Ethical Use Policy</h3>
+          <p>
+            Only test systems you own or have explicit written authorization to assess.
+            Unauthorized access is illegal and harmful.
+          </p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__brand">GreenShield Academy</p>
+      <p class="site-footer__copy">&copy; 2026 GreenShield Academy. For educational purposes only.</p>
+      <nav class="site-footer__nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="tools.html">Tools</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
