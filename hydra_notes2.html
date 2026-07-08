@@ -2,61 +2,104 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Hydra - Online Password Cracking Tool | Full Notes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hack The Future | Cybersecurity Notes & Tools</title>
 <style>
+  * {
+    box-sizing: border-box;
+  }
   body {
     font-family: "Segoe UI", Arial, sans-serif;
     max-width: 900px;
     margin: 0 auto;
     padding: 30px 40px 60px;
-    background: #0e1117;
-    color: #e6e6e6;
+    background: #071208;
+    color: #d4f5d4;
     line-height: 1.6;
   }
+  .hero {
+    text-align: center;
+    padding: 40px 20px 30px;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #0a1f0a 0%, #0f2e14 50%, #071208 100%);
+    border: 2px solid #22c55e;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(34, 197, 94, 0.15);
+  }
+  .hero h1 {
+    color: #39ff14;
+    font-size: 2.8em;
+    margin: 0 0 10px;
+    text-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
+    letter-spacing: 2px;
+    border: none;
+    padding: 0;
+  }
+  .hero p {
+    color: #86efac;
+    font-size: 1.1em;
+    margin: 0;
+  }
+  .tool-link {
+    display: inline-block;
+    background: #14532d;
+    color: #39ff14;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 1px solid #22c55e;
+    margin: 20px 0;
+    font-weight: bold;
+    transition: background 0.2s, box-shadow 0.2s;
+  }
+  .tool-link:hover {
+    background: #166534;
+    box-shadow: 0 0 15px rgba(34, 197, 94, 0.3);
+  }
   h1 {
-    color: #58a6ff;
-    border-bottom: 2px solid #30363d;
+    color: #39ff14;
+    border-bottom: 2px solid #1a4d1a;
     padding-bottom: 10px;
   }
   h2 {
-    color: #f0883e;
+    color: #4ade80;
     margin-top: 40px;
-    border-left: 4px solid #f0883e;
+    border-left: 4px solid #22c55e;
     padding-left: 10px;
   }
   h3 {
-    color: #d2a8ff;
+    color: #86efac;
     margin-top: 25px;
   }
-  p { color: #c9d1d9; }
-  ul, ol { color: #c9d1d9; }
+  p { color: #bbf7d0; }
+  ul, ol { color: #bbf7d0; }
   li { margin-bottom: 4px; }
   .protocol-list {
     columns: 2;
     -webkit-columns: 2;
     -moz-columns: 2;
-    background: #161b22;
+    background: #0a1f0a;
     padding: 20px 40px;
     border-radius: 8px;
-    border: 1px solid #30363d;
+    border: 1px solid #1a4d1a;
   }
   code.inline {
-    background: #161b22;
-    color: #7ee787;
+    background: #0a1f0a;
+    color: #39ff14;
     padding: 2px 6px;
     border-radius: 4px;
     font-family: "Consolas", monospace;
   }
   pre {
-    background: #0d1117;
-    border: 1px solid #30363d;
+    background: #050f05;
+    border: 1px solid #1a4d1a;
     border-radius: 8px;
     padding: 16px 20px;
     overflow-x: auto;
     position: relative;
   }
   pre .cmd {
-    color: #3fb950; /* GREEN command line */
+    color: #39ff14;
     font-family: "Consolas", "Courier New", monospace;
     font-weight: bold;
     font-size: 14.5px;
@@ -64,18 +107,19 @@
     margin-bottom: 2px;
   }
   pre .label {
-    color: #8b949e;
+    color: #6b9e6b;
     font-family: "Consolas", monospace;
     font-size: 13px;
     display: block;
     margin-bottom: 6px;
   }
   .note-box {
-    background: #161b22;
-    border-left: 4px solid #58a6ff;
+    background: #0a1f0a;
+    border-left: 4px solid #22c55e;
     padding: 12px 18px;
     border-radius: 4px;
     margin: 15px 0;
+    color: #bbf7d0;
   }
   table {
     border-collapse: collapse;
@@ -83,335 +127,308 @@
     margin: 15px 0;
   }
   th, td {
-    border: 1px solid #30363d;
+    border: 1px solid #1a4d1a;
     padding: 8px 12px;
     text-align: left;
   }
   th {
-    background: #161b22;
-    color: #f0883e;
+    background: #0a1f0a;
+    color: #4ade80;
   }
   td {
-    color: #c9d1d9;
+    color: #bbf7d0;
   }
   .flag {
-    color: #3fb950;
+    color: #39ff14;
     font-weight: bold;
   }
   .warn {
-    background: #2d1a1a;
-    border-left: 4px solid #f85149;
+    background: #1a2e0a;
+    border-left: 4px solid #facc15;
     padding: 12px 18px;
     border-radius: 4px;
     margin: 15px 0;
-    color: #ffb3ab;
+    color: #fef08a;
+  }
+  hr {
+    border: none;
+    border-top: 1px solid #1a4d1a;
+    margin: 30px 0;
+  }
+  strong {
+    color: #86efac;
   }
 </style>
 </head>
 <body>
-  <h1>WELCOME TO HACKERS PATH</h1>
-  <P> =My personal repository for cybersecurity notes, tools and guides.</P>
-
-  <a href="hydra_notes2.html" class="tool-link"> view hydra_notes2</a>
-
-<h1>🐉 Hydra — Online Password Cracking Tool</h1>
-
-<h2>1. What is Hydra?</h2>
-<p>
-Hydra is a <strong>brute-force online password cracking program</strong>. It is a fast, parallelized 
-login "hacking" tool used to test the strength of authentication systems by systematically 
-attempting username/password combinations against a target service.
-</p>
-
-<div class="note-box">
-Hydra works by attempting many login combinations across many <strong>network protocols</strong> 
-simultaneously (multi-threaded), making it much faster than manual or single-threaded attempts.
-</div>
-
-<div class="warn">
-⚠️ Legal note: Hydra should only be used against systems you own or have explicit written 
-authorization to test. Unauthorized access attempts are illegal in most jurisdictions.
-</div>
-
-<h2>2. Hydra Supported Brute Force Protocols</h2>
-<p>Hydra can perform brute-force attacks against the following protocols/services:</p>
-
-<div class="protocol-list">
-<ol>
-<li>Asterisk</li>
-<li>AFP</li>
-<li>Cisco AAA</li>
-<li>Cisco auth</li>
-<li>Cisco enable</li>
-<li>CVS</li>
-<li>Firebird</li>
-<li>FTP</li>
-<li>HTTP-FORM-GET</li>
-<li>HTTP-FORM-POST</li>
-<li>HTTP-GET</li>
-<li>HTTP-HEAD</li>
-<li>HTTP-POST</li>
-<li>HTTP-PROXY</li>
-<li>HTTPS-FORM-GET</li>
-<li>HTTPS-FORM-POST</li>
-<li>HTTPS-GET</li>
-<li>HTTPS-HEAD</li>
-<li>HTTPS-POST</li>
-<li>HTTP-proxy</li>
-<li>ICQ</li>
-<li>IMAP</li>
-<li>IRC</li>
-<li>LDAP</li>
-<li>MEMCACHED</li>
-<li>MONGODB</li>
-<li>MS-SQL</li>
-<li>MYSQL</li>
-<li>NCP</li>
-<li>NNTP</li>
-<li>Oracle Listener</li>
-<li>Oracle SID</li>
-<li>Oracle</li>
-<li>PC-Anywhere</li>
-<li>PCNFS</li>
-<li>POP3</li>
-<li>POSTGRES</li>
-<li>Radmin</li>
-<li>RDP</li>
-<li>Rexec</li>
-<li>Rlogin</li>
-<li>Rsh</li>
-<li>RTSP</li>
-<li>SAP/R3</li>
-<li>SIP</li>
-<li>SMB</li>
-<li>SMTP Enum</li>
-<li>SNMP v1 + v2 + v3</li>
-<li>SOCKS5</li>
-<li>SSH (v1 and v2)</li>
-<li>SSHKEY</li>
-<li>Subversion</li>
-<li>TeamSpeak (TS2)</li>
-<li>Telnet</li>
-<li>VMware-Auth</li>
-<li>VNC</li>
-<li>XMPP</li>
-</ol>
-</div>
-
-<h2>3. Hydra Commands</h2>
-
-<h3>3.1 SSH Brute Force</h3>
-<pre><span class="label"># Attempt SSH login using a username and password wordlist</span><span class="cmd">hydra -l &lt;username&gt; -P &lt;full_path_to_wordlist&gt; MACHINE_IP -t 4 ssh</span></pre>
-
-<table>
-<tr><th>Flag</th><th>Meaning</th></tr>
-<tr><td class="flag">-l</td><td>Specifies a single username</td></tr>
-<tr><td class="flag">-P</td><td>Specifies the path to a password wordlist</td></tr>
-<tr><td class="flag">-t</td><td>Sets the number of parallel threads/connections to spawn</td></tr>
-</table>
-
-<hr>
-
-<h3>3.2 POST Web Form (Generic Syntax)</h3>
-<pre><span class="label"># Generic syntax for brute-forcing a web login form</span><span class="cmd">sudo hydra &lt;username&gt; &lt;wordlist&gt; MACHINE_IP http-post-form "&lt;path&gt;:&lt;login_credentials&gt;:&lt;invalid_response&gt;"</span></pre>
-
-<p><strong>Parameter breakdown:</strong></p>
-<table>
-<tr><th>Parameter</th><th>Meaning</th></tr>
-<tr><td class="flag">http-post-form</td><td>Tells Hydra the request type is HTTP POST</td></tr>
-<tr><td class="flag">&lt;path&gt;</td><td>The login page URL (relative path)</td></tr>
-<tr><td class="flag">&lt;login_credentials&gt;</td><td>Username/password fields, e.g. <code class="inline">username=^USER^&password=^PASS^</code></td></tr>
-<tr><td class="flag">-V</td><td>Verbose output — shows every login attempt as it happens</td></tr>
-<tr><td class="flag">&lt;invalid_response&gt;</td><td>A unique string that appears on the page only when login fails (used to detect failure)</td></tr>
-</table>
-
-<hr>
-
-<h3>3.3 POST Login Form (Concrete Example)</h3>
-<pre><span class="label"># Brute-force a POST login form on the root page "/"</span><span class="cmd">hydra -l &lt;username&gt; -P &lt;wordlist&gt; MACHINE_IP http-post-form "/:username=^USER^&password=^PASS^:F=incorrect" -V</span></pre>
-
-<p><strong>Explanation:</strong></p>
-<ul>
-<li>The login page is only <code class="inline">/</code>, i.e., the target's main/root IP address page.</li>
-<li><code class="inline">username</code> is the form field name where the username is entered.</li>
-<li>The token <code class="inline">^USER^</code> is replaced by each specified username.</li>
-<li><code class="inline">password</code> is the form field name where the password is entered.</li>
-<li>The token <code class="inline">^PASS^</code> is replaced by each password from the wordlist.</li>
-<li><code class="inline">F=incorrect</code> tells Hydra to treat the login as a <strong>failure</strong> whenever the string "incorrect" appears in the server's response.</li>
-<li><code class="inline">-V</code> gives verbose output, printing every attempt to the terminal.</li>
-</ul>
-
-<hr>
-
-<h3>3.4 Targeting a Non-Default Port</h3>
-<pre><span class="label"># Same attack, but specifying a custom port with -s</span><span class="cmd">hydra -l &lt;username&gt; -P &lt;wordlist&gt; MACHINE_IP http-post-form "/:username=^USER^&password=^PASS^:F=incorrect" -s &lt;port&gt; -V</span></pre>
-
-<table>
-<tr><th>Flag</th><th>Meaning</th></tr>
-<tr><td class="flag">-s</td><td>Specifies a non-default port for the target service</td></tr>
-</table>
-
-<h2>4. Quick Reference — Common Hydra Flags</h2>
-<table>
-<tr><th>Flag</th><th>Description</th></tr>
-<tr><td class="flag">-l</td><td>Single username</td></tr>
-<tr><td class="flag">-L</td><td>File containing list of usernames</td></tr>
-<tr><td class="flag">-p</td><td>Single password</td></tr>
-<tr><td class="flag">-P</td><td>File containing list of passwords</td></tr>
-<tr><td class="flag">-t</td><td>Number of parallel tasks/threads</td></tr>
-<tr><td class="flag">-s</td><td>Non-default port</td></tr>
-<tr><td class="flag">-V / -v</td><td>Verbose mode — show each login attempt</td></tr>
-<tr><td class="flag">-f</td><td>Stop after first valid login is found</td></tr>
-<tr><td class="flag">-o</td><td>Save output/results to a file</td></tr>
-</table>
-
-<h2>5. Examples</h2>
-<div class="note-box">
-📌 Two screenshots (<em>Pasted image 20260708165647.png</em> and <em>Pasted image 20260708165726.png</em>) 
-were referenced in the source material but were not actually attached/uploaded, so they could not 
-be included in this notes file. Please re-upload them if you'd like them embedded here.
-</div>
-
-<h2>6. Installation</h2>
-<pre><span class="label"># Debian/Kali/Ubuntu — usually pre-installed on Kali Linux</span><span class="cmd">sudo apt update && sudo apt install hydra -y</span></pre>
-<pre><span class="label"># Build from source (latest features)</span><span class="cmd">git clone https://github.com/vanhauser-thc/thc-hydra.git
+  <div class="hero">
+    <h1>HACK THE FUTURE</h1>
+    <p>My personal repository for cybersecurity notes, tools and guides.</p>
+    <a href="hydra_notes2.html" class="tool-link">View Hydra Notes</a>
+  </div>
+  <h1>🐉 Hydra — Online Password Cracking Tool</h1>
+  <h2>1. What is Hydra?</h2>
+  <p>
+    Hydra is a <strong>brute-force online password cracking program</strong>. It is a fast, parallelized
+    login "hacking" tool used to test the strength of authentication systems by systematically
+    attempting username/password combinations against a target service.
+  </p>
+  <div class="note-box">
+    Hydra works by attempting many login combinations across many <strong>network protocols</strong>
+    simultaneously (multi-threaded), making it much faster than manual or single-threaded attempts.
+  </div>
+  <div class="warn">
+    ⚠️ Legal note: Hydra should only be used against systems you own or have explicit written
+    authorization to test. Unauthorized access attempts are illegal in most jurisdictions.
+  </div>
+  <h2>2. Hydra Supported Brute Force Protocols</h2>
+  <p>Hydra can perform brute-force attacks against the following protocols/services:</p>
+  <div class="protocol-list">
+    <ol>
+      <li>Asterisk</li>
+      <li>AFP</li>
+      <li>Cisco AAA</li>
+      <li>Cisco auth</li>
+      <li>Cisco enable</li>
+      <li>CVS</li>
+      <li>Firebird</li>
+      <li>FTP</li>
+      <li>HTTP-FORM-GET</li>
+      <li>HTTP-FORM-POST</li>
+      <li>HTTP-GET</li>
+      <li>HTTP-HEAD</li>
+      <li>HTTP-POST</li>
+      <li>HTTP-PROXY</li>
+      <li>HTTPS-FORM-GET</li>
+      <li>HTTPS-FORM-POST</li>
+      <li>HTTPS-GET</li>
+      <li>HTTPS-HEAD</li>
+      <li>HTTPS-POST</li>
+      <li>HTTP-proxy</li>
+      <li>ICQ</li>
+      <li>IMAP</li>
+      <li>IRC</li>
+      <li>LDAP</li>
+      <li>MEMCACHED</li>
+      <li>MONGODB</li>
+      <li>MS-SQL</li>
+      <li>MYSQL</li>
+      <li>NCP</li>
+      <li>NNTP</li>
+      <li>Oracle Listener</li>
+      <li>Oracle SID</li>
+      <li>Oracle</li>
+      <li>PC-Anywhere</li>
+      <li>PCNFS</li>
+      <li>POP3</li>
+      <li>POSTGRES</li>
+      <li>Radmin</li>
+      <li>RDP</li>
+      <li>Rexec</li>
+      <li>Rlogin</li>
+      <li>Rsh</li>
+      <li>RTSP</li>
+      <li>SAP/R3</li>
+      <li>SIP</li>
+      <li>SMB</li>
+      <li>SMTP Enum</li>
+      <li>SNMP v1 + v2 + v3</li>
+      <li>SOCKS5</li>
+      <li>SSH (v1 and v2)</li>
+      <li>SSHKEY</li>
+      <li>Subversion</li>
+      <li>TeamSpeak (TS2)</li>
+      <li>Telnet</li>
+      <li>VMware-Auth</li>
+      <li>VNC</li>
+      <li>XMPP</li>
+    </ol>
+  </div>
+  <h2>3. Hydra Commands</h2>
+  <h3>3.1 SSH Brute Force</h3>
+  <pre><span class="label"># Attempt SSH login using a username and password wordlist</span><span class="cmd">hydra -l &lt;username&gt; -P &lt;full_path_to_wordlist&gt; MACHINE_IP -t 4 ssh</span></pre>
+  <table>
+    <tr><th>Flag</th><th>Meaning</th></tr>
+    <tr><td class="flag">-l</td><td>Specifies a single username</td></tr>
+    <tr><td class="flag">-P</td><td>Specifies the path to a password wordlist</td></tr>
+    <tr><td class="flag">-t</td><td>Sets the number of parallel threads/connections to spawn</td></tr>
+  </table>
+  <hr>
+  <h3>3.2 POST Web Form (Generic Syntax)</h3>
+  <pre><span class="label"># Generic syntax for brute-forcing a web login form</span><span class="cmd">sudo hydra &lt;username&gt; &lt;wordlist&gt; MACHINE_IP http-post-form "&lt;path&gt;:&lt;login_credentials&gt;:&lt;invalid_response&gt;"</span></pre>
+  <p><strong>Parameter breakdown:</strong></p>
+  <table>
+    <tr><th>Parameter</th><th>Meaning</th></tr>
+    <tr><td class="flag">http-post-form</td><td>Tells Hydra the request type is HTTP POST</td></tr>
+    <tr><td class="flag">&lt;path&gt;</td><td>The login page URL (relative path)</td></tr>
+    <tr><td class="flag">&lt;login_credentials&gt;</td><td>Username/password fields, e.g. <code class="inline">username=^USER^&password=^PASS^</code></td></tr>
+    <tr><td class="flag">-V</td><td>Verbose output — shows every login attempt as it happens</td></tr>
+    <tr><td class="flag">&lt;invalid_response&gt;</td><td>A unique string that appears on the page only when login fails (used to detect failure)</td></tr>
+  </table>
+  <hr>
+  <h3>3.3 POST Login Form (Concrete Example)</h3>
+  <pre><span class="label"># Brute-force a POST login form on the root page "/"</span><span class="cmd">hydra -l &lt;username&gt; -P &lt;wordlist&gt; MACHINE_IP http-post-form "/:username=^USER^&password=^PASS^:F=incorrect" -V</span></pre>
+  <p><strong>Explanation:</strong></p>
+  <ul>
+    <li>The login page is only <code class="inline">/</code>, i.e., the target's main/root IP address page.</li>
+    <li><code class="inline">username</code> is the form field name where the username is entered.</li>
+    <li>The token <code class="inline">^USER^</code> is replaced by each specified username.</li>
+    <li><code class="inline">password</code> is the form field name where the password is entered.</li>
+    <li>The token <code class="inline">^PASS^</code> is replaced by each password from the wordlist.</li>
+    <li><code class="inline">F=incorrect</code> tells Hydra to treat the login as a <strong>failure</strong> whenever the string "incorrect" appears in the server's response.</li>
+    <li><code class="inline">-V</code> gives verbose output, printing every attempt to the terminal.</li>
+  </ul>
+  <hr>
+  <h3>3.4 Targeting a Non-Default Port</h3>
+  <pre><span class="label"># Same attack, but specifying a custom port with -s</span><span class="cmd">hydra -l &lt;username&gt; -P &lt;wordlist&gt; MACHINE_IP http-post-form "/:username=^USER^&password=^PASS^:F=incorrect" -s &lt;port&gt; -V</span></pre>
+  <table>
+    <tr><th>Flag</th><th>Meaning</th></tr>
+    <tr><td class="flag">-s</td><td>Specifies a non-default port for the target service</td></tr>
+  </table>
+  <h2>4. Quick Reference — Common Hydra Flags</h2>
+  <table>
+    <tr><th>Flag</th><th>Description</th></tr>
+    <tr><td class="flag">-l</td><td>Single username</td></tr>
+    <tr><td class="flag">-L</td><td>File containing list of usernames</td></tr>
+    <tr><td class="flag">-p</td><td>Single password</td></tr>
+    <tr><td class="flag">-P</td><td>File containing list of passwords</td></tr>
+    <tr><td class="flag">-t</td><td>Number of parallel tasks/threads</td></tr>
+    <tr><td class="flag">-s</td><td>Non-default port</td></tr>
+    <tr><td class="flag">-V / -v</td><td>Verbose mode — show each login attempt</td></tr>
+    <tr><td class="flag">-f</td><td>Stop after first valid login is found</td></tr>
+    <tr><td class="flag">-o</td><td>Save output/results to a file</td></tr>
+  </table>
+  <h2>5. Examples</h2>
+  <div class="note-box">
+    📌 Two screenshots (<em>Pasted image 20260708165647.png</em> and <em>Pasted image 20260708165726.png</em>)
+    were referenced in the source material but were not actually attached/uploaded, so they could not
+    be included in this notes file. Please re-upload them if you'd like them embedded here.
+  </div>
+  <h2>6. Installation</h2>
+  <pre><span class="label"># Debian/Kali/Ubuntu — usually pre-installed on Kali Linux</span><span class="cmd">sudo apt update && sudo apt install hydra -y</span></pre>
+  <pre><span class="label"># Build from source (latest features)</span><span class="cmd">git clone https://github.com/vanhauser-thc/thc-hydra.git
 cd thc-hydra
 ./configure
 make
 sudo make install</span></pre>
-<pre><span class="label"># Check installed version / help menu</span><span class="cmd">hydra -h</span></pre>
-
-<h2>7. Basic Hydra Syntax Structure</h2>
-<pre><span class="cmd">hydra [options] &lt;target IP&gt; &lt;protocol/service&gt;</span></pre>
-<p>General order of a Hydra command:</p>
-<ol>
-<li><code class="inline">hydra</code> — the binary</li>
-<li>Login options (<code class="inline">-l</code> / <code class="inline">-L</code>)</li>
-<li>Password options (<code class="inline">-p</code> / <code class="inline">-P</code>)</li>
-<li>Optional tuning flags (<code class="inline">-t</code>, <code class="inline">-s</code>, <code class="inline">-f</code>, <code class="inline">-V</code>, etc.)</li>
-<li>Target (IP, hostname, or CIDR range)</li>
-<li>Protocol/service name (with any protocol-specific parameters, e.g. http-post-form)</li>
-</ol>
-
-<h2>8. Username &amp; Password List Options</h2>
-<table>
-<tr><th>Flag</th><th>Description</th></tr>
-<tr><td class="flag">-l</td><td>Single username</td></tr>
-<tr><td class="flag">-L</td><td>File containing a list of usernames</td></tr>
-<tr><td class="flag">-p</td><td>Single password</td></tr>
-<tr><td class="flag">-P</td><td>File containing a list of passwords</td></tr>
-<tr><td class="flag">-C</td><td>Colon-separated "login:password" combo file (replaces -l/-L and -p/-P)</td></tr>
-<tr><td class="flag">-e nsr</td><td>Extra checks: <strong>n</strong> = null password, <strong>s</strong> = login as password, <strong>r</strong> = reversed login as password</td></tr>
-<tr><td class="flag">-x</td><td>Generate passwords via brute-force mask, e.g. <code class="inline">-x 4:8:aA1</code> (min:max:charset)</td></tr>
-<tr><td class="flag">-u</td><td>Loop through users first, then passwords (helps avoid account lockouts)</td></tr>
-</table>
-<pre><span class="label"># Using a combined login:password file</span><span class="cmd">hydra -C combo.txt MACHINE_IP ssh</span></pre>
-
-<h3>8.1 Common Wordlists</h3>
-<ul>
-<li><code class="inline">/usr/share/wordlists/rockyou.txt</code> — most common password wordlist (comes with Kali, may need to be unzipped first)</li>
-<li><strong>SecLists</strong> — large repository of wordlists for usernames, passwords, and fuzzing payloads</li>
-<li><strong>crunch</strong> — tool to generate custom wordlists based on patterns/character sets</li>
-<li><strong>cewl</strong> — scrapes a target website to build a context-aware custom wordlist</li>
-</ul>
-<pre><span class="label"># Unzip rockyou.txt if compressed</span><span class="cmd">sudo gunzip /usr/share/wordlists/rockyou.txt.gz</span></pre>
-
-<h2>9. Timing, Throttling &amp; Reliability Options</h2>
-<table>
-<tr><th>Flag</th><th>Description</th></tr>
-<tr><td class="flag">-t</td><td>Number of parallel connections/tasks (default 16). Lower this against fragile or rate-limited services</td></tr>
-<tr><td class="flag">-w</td><td>Max wait time (seconds) for a response per attempt</td></tr>
-<tr><td class="flag">-W</td><td>Wait time between connects</td></tr>
-<tr><td class="flag">-c</td><td>Pause (seconds) between each login attempt per thread — helps evade lockouts/IDS</td></tr>
-<tr><td class="flag">-I</td><td>Ignore an existing restore file and start a fresh scan</td></tr>
-<tr><td class="flag">-R</td><td>Restore a previously interrupted session</td></tr>
-</table>
-<pre><span class="label"># Resume a previously interrupted Hydra scan</span><span class="cmd">hydra -R</span></pre>
-
-<h2>10. Output &amp; Logging Options</h2>
-<table>
-<tr><th>Flag</th><th>Description</th></tr>
-<tr><td class="flag">-o &lt;file&gt;</td><td>Write found credentials to a file</td></tr>
-<tr><td class="flag">-b &lt;format&gt;</td><td>Output format: text, json, jsonv1</td></tr>
-<tr><td class="flag">-f</td><td>Exit after the first valid login/password pair is found (single target)</td></tr>
-<tr><td class="flag">-F</td><td>Exit after first valid pair is found on ANY target (multi-target scans)</td></tr>
-<tr><td class="flag">-d</td><td>Debug mode — extra diagnostic output</td></tr>
-<tr><td class="flag">-q</td><td>Suppress connection error messages</td></tr>
-</table>
-<pre><span class="label"># Save results in JSON format and stop at first hit</span><span class="cmd">hydra -l admin -P rockyou.txt MACHINE_IP -f -o results.json -b jsonv1 ssh</span></pre>
-
-<h2>11. Targeting Multiple Hosts / Ranges</h2>
-<pre><span class="label"># Brute force across multiple targets listed in a file</span><span class="cmd">hydra -l admin -P passwords.txt -M targets.txt ssh</span></pre>
-<table>
-<tr><th>Flag</th><th>Description</th></tr>
-<tr><td class="flag">-M</td><td>File containing a list of target IPs/hostnames</td></tr>
-<tr><td class="flag">-6</td><td>Use IPv6 instead of IPv4</td></tr>
-</table>
-
-<h2>12. Working with Other Common Services (Extra Examples)</h2>
-<pre><span class="label"># FTP brute force</span><span class="cmd">hydra -l admin -P rockyou.txt MACHINE_IP ftp</span></pre>
-<pre><span class="label"># Telnet brute force</span><span class="cmd">hydra -l admin -P rockyou.txt MACHINE_IP telnet</span></pre>
-<pre><span class="label"># RDP brute force</span><span class="cmd">hydra -l administrator -P rockyou.txt rdp://MACHINE_IP</span></pre>
-<pre><span class="label"># SMB brute force</span><span class="cmd">hydra -l admin -P rockyou.txt MACHINE_IP smb</span></pre>
-<pre><span class="label"># MySQL brute force</span><span class="cmd">hydra -l root -P rockyou.txt MACHINE_IP mysql</span></pre>
-<pre><span class="label"># SSH brute force using key passphrases instead of passwords</span><span class="cmd">hydra -l root -P keyfile_passphrases.txt MACHINE_IP sshkey</span></pre>
-
-<h2>13. Using Hydra Through a Proxy</h2>
-<pre><span class="label"># Route Hydra traffic through a SOCKS proxy (via proxychains)</span><span class="cmd">proxychains hydra -l admin -P rockyou.txt MACHINE_IP ssh</span></pre>
-<p>Hydra also supports the <code class="inline">HYDRA_PROXY_HTTP</code> / <code class="inline">HYDRA_PROXY</code> environment variables for proxying HTTP(S)-based attacks directly.</p>
-
-<h2>14. Graphical Interface — xHydra</h2>
-<p>
-Hydra ships with a GUI front-end called <strong>xHydra</strong>, exposing the same options through 
-tabs (Target, Passwords, Tuning, Specific, Start) for users who prefer a visual interface over the 
-command line.
-</p>
-<pre><span class="label"># Launch the GUI version</span><span class="cmd">xhydra</span></pre>
-
-<h2>15. HTTPS Forms &amp; SSL Considerations</h2>
-<p>For login forms served over HTTPS, use <code class="inline">https-post-form</code> (or <code class="inline">https-get-form</code>) instead of the plain HTTP module:</p>
-<pre><span class="label"># Same attack as before, but over HTTPS</span><span class="cmd">hydra -l admin -P rockyou.txt MACHINE_IP https-post-form "/login:username=^USER^&password=^PASS^:F=incorrect"</span></pre>
-<div class="note-box">
-Add extra <code class="inline">-V</code>/<code class="inline">-d</code> flags when debugging why a form-based attack isn't detecting failures correctly — an incorrect <code class="inline">F=</code> string is the most common cause of false "0 valid passwords" results.
-</div>
-
-<h2>16. Identifying the Correct Failure/Success String</h2>
-<p>Getting the <code class="inline">F=</code> (failure string) or <code class="inline">S=</code> (success string) wrong is the #1 reason Hydra reports "0 valid passwords found" even when a correct password exists. To find the right string:</p>
-<ol>
-<li>Open the login page in a browser with developer tools (Network tab) open.</li>
-<li>Submit one deliberately wrong login and inspect the response body/headers.</li>
-<li>Submit one known-correct login and compare the response.</li>
-<li>Pick a string that appears <strong>only</strong> on failure (use <code class="inline">F=</code>) or <strong>only</strong> on success (use <code class="inline">S=</code>) — e.g. a redirect header, cookie, or specific error text.</li>
-</ol>
-
-<h2>17. Hydra vs. Similar Tools</h2>
-<table>
-<tr><th>Tool</th><th>Notes</th></tr>
-<tr><td>Hydra</td><td>Widest protocol support, very fast, actively maintained</td></tr>
-<tr><td>Medusa</td><td>Similar purpose, modular design, sometimes more stable on certain protocols</td></tr>
-<tr><td>Ncrack</td><td>Built for large-scale network authentication testing; integrates well with Nmap</td></tr>
-<tr><td>Patator</td><td>Highly flexible, scriptable in Python, good for custom/non-standard protocols</td></tr>
-</table>
-
-<h2>18. Defensive Measures Against Brute-Force Attacks (Blue Team Notes)</h2>
-<ul>
-<li><strong>Account lockout policies</strong> after N failed attempts</li>
-<li><strong>Rate limiting / throttling</strong> on login endpoints</li>
-<li><strong>Fail2ban</strong> or similar IPS to auto-block offending IPs</li>
-<li><strong>Multi-factor authentication (MFA)</strong> to neutralize password-only brute forcing</li>
-<li><strong>CAPTCHA</strong> on web login forms after repeated failures</li>
-<li><strong>Strong password policies</strong>, banning common/breached passwords</li>
-<li><strong>Monitoring &amp; alerting</strong> on abnormal authentication volume (SIEM rules)</li>
-<li>Disabling unused/legacy protocols (e.g., Telnet, FTP) in favor of encrypted alternatives</li>
-</ul>
-
-<h2>19. Ethical &amp; Legal Reminder</h2>
-<div class="warn">
-⚠️ Only run Hydra against systems you own, or for which you have explicit, documented, written 
-authorization (e.g., a signed penetration testing engagement or a lab environment like 
-HackTheBox/TryHackMe). Unauthorized brute-forcing of login systems is illegal in most jurisdictions 
-under computer misuse / unauthorized access laws.
-</div>
-
+  <pre><span class="label"># Check installed version / help menu</span><span class="cmd">hydra -h</span></pre>
+  <h2>7. Basic Hydra Syntax Structure</h2>
+  <pre><span class="cmd">hydra [options] &lt;target IP&gt; &lt;protocol/service&gt;</span></pre>
+  <p>General order of a Hydra command:</p>
+  <ol>
+    <li><code class="inline">hydra</code> — the binary</li>
+    <li>Login options (<code class="inline">-l</code> / <code class="inline">-L</code>)</li>
+    <li>Password options (<code class="inline">-p</code> / <code class="inline">-P</code>)</li>
+    <li>Optional tuning flags (<code class="inline">-t</code>, <code class="inline">-s</code>, <code class="inline">-f</code>, <code class="inline">-V</code>, etc.)</li>
+    <li>Target (IP, hostname, or CIDR range)</li>
+    <li>Protocol/service name (with any protocol-specific parameters, e.g. http-post-form)</li>
+  </ol>
+  <h2>8. Username &amp; Password List Options</h2>
+  <table>
+    <tr><th>Flag</th><th>Description</th></tr>
+    <tr><td class="flag">-l</td><td>Single username</td></tr>
+    <tr><td class="flag">-L</td><td>File containing a list of usernames</td></tr>
+    <tr><td class="flag">-p</td><td>Single password</td></tr>
+    <tr><td class="flag">-P</td><td>File containing a list of passwords</td></tr>
+    <tr><td class="flag">-C</td><td>Colon-separated "login:password" combo file (replaces -l/-L and -p/-P)</td></tr>
+    <tr><td class="flag">-e nsr</td><td>Extra checks: <strong>n</strong> = null password, <strong>s</strong> = login as password, <strong>r</strong> = reversed login as password</td></tr>
+    <tr><td class="flag">-x</td><td>Generate passwords via brute-force mask, e.g. <code class="inline">-x 4:8:aA1</code> (min:max:charset)</td></tr>
+    <tr><td class="flag">-u</td><td>Loop through users first, then passwords (helps avoid account lockouts)</td></tr>
+  </table>
+  <pre><span class="label"># Using a combined login:password file</span><span class="cmd">hydra -C combo.txt MACHINE_IP ssh</span></pre>
+  <h3>8.1 Common Wordlists</h3>
+  <ul>
+    <li><code class="inline">/usr/share/wordlists/rockyou.txt</code> — most common password wordlist (comes with Kali, may need to be unzipped first)</li>
+    <li><strong>SecLists</strong> — large repository of wordlists for usernames, passwords, and fuzzing payloads</li>
+    <li><strong>crunch</strong> — tool to generate custom wordlists based on patterns/character sets</li>
+    <li><strong>cewl</strong> — scrapes a target website to build a context-aware custom wordlist</li>
+  </ul>
+  <pre><span class="label"># Unzip rockyou.txt if compressed</span><span class="cmd">sudo gunzip /usr/share/wordlists/rockyou.txt.gz</span></pre>
+  <h2>9. Timing, Throttling &amp; Reliability Options</h2>
+  <table>
+    <tr><th>Flag</th><th>Description</th></tr>
+    <tr><td class="flag">-t</td><td>Number of parallel connections/tasks (default 16). Lower this against fragile or rate-limited services</td></tr>
+    <tr><td class="flag">-w</td><td>Max wait time (seconds) for a response per attempt</td></tr>
+    <tr><td class="flag">-W</td><td>Wait time between connects</td></tr>
+    <tr><td class="flag">-c</td><td>Pause (seconds) between each login attempt per thread — helps evade lockouts/IDS</td></tr>
+    <tr><td class="flag">-I</td><td>Ignore an existing restore file and start a fresh scan</td></tr>
+    <tr><td class="flag">-R</td><td>Restore a previously interrupted session</td></tr>
+  </table>
+  <pre><span class="label"># Resume a previously interrupted Hydra scan</span><span class="cmd">hydra -R</span></pre>
+  <h2>10. Output &amp; Logging Options</h2>
+  <table>
+    <tr><th>Flag</th><th>Description</th></tr>
+    <tr><td class="flag">-o &lt;file&gt;</td><td>Write found credentials to a file</td></tr>
+    <tr><td class="flag">-b &lt;format&gt;</td><td>Output format: text, json, jsonv1</td></tr>
+    <tr><td class="flag">-f</td><td>Exit after the first valid login/password pair is found (single target)</td></tr>
+    <tr><td class="flag">-F</td><td>Exit after first valid pair is found on ANY target (multi-target scans)</td></tr>
+    <tr><td class="flag">-d</td><td>Debug mode — extra diagnostic output</td></tr>
+    <tr><td class="flag">-q</td><td>Suppress connection error messages</td></tr>
+  </table>
+  <pre><span class="label"># Save results in JSON format and stop at first hit</span><span class="cmd">hydra -l admin -P rockyou.txt MACHINE_IP -f -o results.json -b jsonv1 ssh</span></pre>
+  <h2>11. Targeting Multiple Hosts / Ranges</h2>
+  <pre><span class="label"># Brute force across multiple targets listed in a file</span><span class="cmd">hydra -l admin -P passwords.txt -M targets.txt ssh</span></pre>
+  <table>
+    <tr><th>Flag</th><th>Description</th></tr>
+    <tr><td class="flag">-M</td><td>File containing a list of target IPs/hostnames</td></tr>
+    <tr><td class="flag">-6</td><td>Use IPv6 instead of IPv4</td></tr>
+  </table>
+  <h2>12. Working with Other Common Services (Extra Examples)</h2>
+  <pre><span class="label"># FTP brute force</span><span class="cmd">hydra -l admin -P rockyou.txt MACHINE_IP ftp</span></pre>
+  <pre><span class="label"># Telnet brute force</span><span class="cmd">hydra -l admin -P rockyou.txt MACHINE_IP telnet</span></pre>
+  <pre><span class="label"># RDP brute force</span><span class="cmd">hydra -l administrator -P rockyou.txt rdp://MACHINE_IP</span></pre>
+  <pre><span class="label"># SMB brute force</span><span class="cmd">hydra -l admin -P rockyou.txt MACHINE_IP smb</span></pre>
+  <pre><span class="label"># MySQL brute force</span><span class="cmd">hydra -l root -P rockyou.txt MACHINE_IP mysql</span></pre>
+  <pre><span class="label"># SSH brute force using key passphrases instead of passwords</span><span class="cmd">hydra -l root -P keyfile_passphrases.txt MACHINE_IP sshkey</span></pre>
+  <h2>13. Using Hydra Through a Proxy</h2>
+  <pre><span class="label"># Route Hydra traffic through a SOCKS proxy (via proxychains)</span><span class="cmd">proxychains hydra -l admin -P rockyou.txt MACHINE_IP ssh</span></pre>
+  <p>Hydra also supports the <code class="inline">HYDRA_PROXY_HTTP</code> / <code class="inline">HYDRA_PROXY</code> environment variables for proxying HTTP(S)-based attacks directly.</p>
+  <h2>14. Graphical Interface — xHydra</h2>
+  <p>
+    Hydra ships with a GUI front-end called <strong>xHydra</strong>, exposing the same options through
+    tabs (Target, Passwords, Tuning, Specific, Start) for users who prefer a visual interface over the
+    command line.
+  </p>
+  <pre><span class="label"># Launch the GUI version</span><span class="cmd">xhydra</span></pre>
+  <h2>15. HTTPS Forms &amp; SSL Considerations</h2>
+  <p>For login forms served over HTTPS, use <code class="inline">https-post-form</code> (or <code class="inline">https-get-form</code>) instead of the plain HTTP module:</p>
+  <pre><span class="label"># Same attack as before, but over HTTPS</span><span class="cmd">hydra -l admin -P rockyou.txt MACHINE_IP https-post-form "/login:username=^USER^&password=^PASS^:F=incorrect"</span></pre>
+  <div class="note-box">
+    Add extra <code class="inline">-V</code>/<code class="inline">-d</code> flags when debugging why a form-based attack isn't detecting failures correctly — an incorrect <code class="inline">F=</code> string is the most common cause of false "0 valid passwords" results.
+  </div>
+  <h2>16. Identifying the Correct Failure/Success String</h2>
+  <p>Getting the <code class="inline">F=</code> (failure string) or <code class="inline">S=</code> (success string) wrong is the #1 reason Hydra reports "0 valid passwords found" even when a correct password exists. To find the right string:</p>
+  <ol>
+    <li>Open the login page in a browser with developer tools (Network tab) open.</li>
+    <li>Submit one deliberately wrong login and inspect the response body/headers.</li>
+    <li>Submit one known-correct login and compare the response.</li>
+    <li>Pick a string that appears <strong>only</strong> on failure (use <code class="inline">F=</code>) or <strong>only</strong> on success (use <code class="inline">S=</code>) — e.g. a redirect header, cookie, or specific error text.</li>
+  </ol>
+  <h2>17. Hydra vs. Similar Tools</h2>
+  <table>
+    <tr><th>Tool</th><th>Notes</th></tr>
+    <tr><td>Hydra</td><td>Widest protocol support, very fast, actively maintained</td></tr>
+    <tr><td>Medusa</td><td>Similar purpose, modular design, sometimes more stable on certain protocols</td></tr>
+    <tr><td>Ncrack</td><td>Built for large-scale network authentication testing; integrates well with Nmap</td></tr>
+    <tr><td>Patator</td><td>Highly flexible, scriptable in Python, good for custom/non-standard protocols</td></tr>
+  </table>
+  <h2>18. Defensive Measures Against Brute-Force Attacks (Blue Team Notes)</h2>
+  <ul>
+    <li><strong>Account lockout policies</strong> after N failed attempts</li>
+    <li><strong>Rate limiting / throttling</strong> on login endpoints</li>
+    <li><strong>Fail2ban</strong> or similar IPS to auto-block offending IPs</li>
+    <li><strong>Multi-factor authentication (MFA)</strong> to neutralize password-only brute forcing</li>
+    <li><strong>CAPTCHA</strong> on web login forms after repeated failures</li>
+    <li><strong>Strong password policies</strong>, banning common/breached passwords</li>
+    <li><strong>Monitoring &amp; alerting</strong> on abnormal authentication volume (SIEM rules)</li>
+    <li>Disabling unused/legacy protocols (e.g., Telnet, FTP) in favor of encrypted alternatives</li>
+  </ul>
+  <h2>19. Ethical &amp; Legal Reminder</h2>
+  <div class="warn">
+    ⚠️ Only run Hydra against systems you own, or for which you have explicit, documented, written
+    authorization (e.g., a signed penetration testing engagement or a lab environment like
+    HackTheBox/TryHackMe). Unauthorized brute-forcing of login systems is illegal in most jurisdictions
+    under computer misuse / unauthorized access laws.
+  </div>
 </body>
 </html>
