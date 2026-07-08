@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hack The Future | Home</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #071208;
+    color: #d4f5d4;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background: linear-gradient(135deg, #0a1f0a 0%, #0f2e14 50%, #071208 100%);
+    border-bottom: 2px solid #22c55e;
+    box-shadow: 0 4px 30px rgba(34, 197, 94, 0.15);
+  }
+  header h1 {
+    color: #39ff14;
+    font-size: 3em;
+    text-shadow: 0 0 25px rgba(57, 255, 20, 0.4);
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+  }
+  header p {
+    color: #86efac;
+    font-size: 1.15em;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 30px 60px;
+  }
+  h2 {
+    color: #4ade80;
+    border-left: 4px solid #22c55e;
+    padding-left: 12px;
+    margin-bottom: 20px;
+  }
+  .intro {
+    background: #0a1f0a;
+    border: 1px solid #1a4d1a;
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin-bottom: 40px;
+    color: #bbf7d0;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 10px;
+  }
+  .card {
+    background: #0a1f0a;
+    border: 1px solid #1a4d1a;
+    border-radius: 10px;
+    padding: 24px;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  }
+  .card:hover {
+    border-color: #22c55e;
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
+    transform: translateY(-3px);
+  }
+  .card h3 {
+    color: #39ff14;
+    margin-bottom: 8px;
+    font-size: 1.2em;
+  }
+  .card p {
+    color: #86efac;
+    font-size: 0.95em;
+    margin-bottom: 16px;
+  }
+  .card a {
+    display: inline-block;
+    background: #14532d;
+    color: #39ff14;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    border: 1px solid #22c55e;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: background 0.2s;
+  }
+  .card a:hover {
+    background: #166534;
+  }
+  .warn {
+    background: #1a2e0a;
+    border-left: 4px solid #facc15;
+    padding: 14px 20px;
+    border-radius: 6px;
+    margin-top: 40px;
+    color: #fef08a;
+    font-size: 0.95em;
+  }
+  footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #1a4d1a;
+    color: #6b9e6b;
+    font-size: 0.85em;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>HACK THE FUTURE</h1>
+  <p>My personal repository for cybersecurity notes, tools and guides.</p>
+</header>
+<main>
+  <div class="intro">
+    Welcome to <strong>Hack The Future</strong> — a collection of practical cybersecurity
+    notes covering offensive and defensive security tools, techniques, and command references.
+    Select a topic below to get started.
+  </div>
+  <h2>📚 Notes &amp; Guides</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>🐉 Hydra</h3>
+      <p>Online password cracking tool — protocols, commands, flags, and examples.</p>
+      <a href="hydra_notes.html">View Notes →</a>
+    </div>
+    <!-- Add more cards here as you create new notes -->
+  </div>
+  <div class="warn">
+    ⚠️ All content on this site is for <strong>educational and authorized testing purposes only</strong>.
+    Never use these tools against systems you do not own or lack explicit written permission to test.
+  </div>
+</main>
+<footer>
+  &copy; 2026 Hack The Future — Cybersecurity Notes
+</footer>
+</body>
+</html>
